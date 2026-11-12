@@ -1,0 +1,377 @@
+/* ===== 맨 위 헤더 (로고 + 제목 + 메뉴) ===== */
+.heading{
+    display: flex;
+    margin-left:30px;
+}
+.heading img{
+    width:100px;
+    height:100px;
+    padding-top:20px;
+
+}
+header{
+    display: flex; /* 제목이랑 메뉴 가로로 놓으려고 씀 */
+    background-image:url("board_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 3000px;
+    background-position: center;
+}
+.heading h2{
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: 10px;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+    font-size:20px;
+    font-weight: bold;
+    font-style:italic;
+    margin-top: 58px;
+    margin-left: 10px;
+}
+
+/* 상단 메뉴 바 */
+.navigation{
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgb(1, 0, 0);
+    border-radius: 10px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.9); /* 스크롤하면 뒤에 글자가 비쳐서 배경색 넣음 */
+    position: fixed; /* 스크롤해도 맨 위에 고정 */
+    top:10px;
+    right:5px;
+    z-index: 1000; /* 다른 요소들보다 위에 보이게 */
+}
+.navigation nav{
+    margin:10px;
+    font-family: "Do Hyeon", sans-serif;  font-weight: 400;  font-style: normal; /* 구글폰트 */
+}
+.navigation a:link,.navigation a:visited{
+    text-decoration: none;
+    color:#6973df;
+    font-size: 17px;
+}
+.navigation a:hover, .navigation a:active{
+    cursor:pointer;
+    text-decoration: none;
+    color:#831ca5;
+    font-size: 17px;
+}
+html {
+  scroll-behavior: smooth; /* 메뉴 누르면 부드럽게 이동 */
+  scroll-padding-top: 80px; /* 고정된 메뉴바에 안 가리게 */
+}
+
+/* ===== 푸터 ===== */
+.foot{
+    display:flex;
+    align-items: center; /* 교차축인 세로 축 기준으로 가운데 정렬*/ 
+    gap:30px;
+}
+
+/* ===== 행사 표 ===== */
+td, th{
+    border:1px dotted black;
+    border-radius: 10px; /* 셀마다 둥글게 */
+}
+
+.rule{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 안쪽 글 높이를 그대로 둬야 칸보다 길어져서 스크롤 생김 */
+    border:1px solid black;
+    background-color: azure;
+    height: 200px;
+    overflow: auto; /* 넘치면 스크롤바 생김 */
+}
+footer{
+    border: 2px solid black;
+}
+
+/* ===== 동아리 소개 섹션 ===== */
+#club_info{
+    display: flex; /* 왼쪽 문단, 오른쪽 링크 카드 나란히 */
+}
+/* 섹션 제목 (What The ABC Is 같은 거) */
+#nav_sub{
+    text-align: center;
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: #fafafa;
+    color:hsl(215, 63%, 57%);
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: 10px;
+    letter-spacing: -0.5px;
+    line-height: 1.5;
+}
+/* 문단 세 개 박스 */
+#club_info_text{
+    border:1px solid black;
+    border-radius: 10px;
+    background-color: #fafafa;
+    width:60vw;
+    margin-left:5vw;
+    padding-top:20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size:20px;
+    font-weight: bold;
+    font-style:normal;
+}
+/* 이미지 밑에 있는 링크 글자 */
+#club_info_video{
+    display:block; /* a 태그는 인라인이라 height 먹게 하려고 block으로 바꿈 */
+    margin-left: 10vw;
+    padding:10px;
+    height:20px;
+}
+/* 이미지 + 링크 묶음 */
+.link_card{
+    display: flex;
+    flex-direction: column; /* 이미지 위, 링크 아래 */
+    margin-left:30px;
+}
+.link_card img{
+    width:450px;
+    height:200px;
+    object-fit: cover; /* 사진 안 찌그러지게 */
+    border:3px double rgb(120,120,120);
+    box-sizing: border-box;
+}
+.link_card #club_info_video{
+    display:block;
+    text-align: center;
+    margin-right:171px;
+    text-decoration: none;
+}
+.link_card a:link,.link_card a:visited{
+    font-size: 16px;
+    color: hsl(240, 6%, 19%);
+}
+
+article{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* ===== 행사 섹션 ===== */
+#tab{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-spacing: 0 10px; /* 행 사이 간격 (margin은 tr에 안 먹음) */
+}
+table tr:nth-child(even){
+    background-color: #f7ecd9;
+}
+#category{
+    width:100px; /* 분류 칸 너비 통일 */
+}
+#name{
+    border:1px black solid; /* 헤더 칸만 실선으로 */
+}
+#club_events{
+    display: flex; /* 이미지 - 표 - 이미지 가로 배치 */
+    margin: 30px;
+}
+td{
+    text-align: center;
+}
+
+/* ===== 혜택 섹션 ===== */
+li{
+    font-size: large;
+}
+ul{
+    margin-left:5vw;
+}
+#footnav{
+    display:flex;
+}
+.benefit_list{
+    list-style-type: none; /* 기본 점 없앰 */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* 한 줄에 다 안 들어가면 밑으로 내려가게 */
+    text-align: center;
+    justify-self: center;
+}
+li{
+    width:400px;
+    height:200px;
+    border:3px solid rgb(232, 215, 141);
+    background-color: aliceblue;
+}
+li img{
+    object-fit: cover;
+}
+#club_benefit{
+    display:flex;
+    justify-content: center; /* 카드들 가운데로 */
+}
+
+/* ===== 소개 영상 ===== */
+#club_video {
+    text-align: center;
+}
+#club_video video {
+    max-width: 100%; /* 화면 작아져도 안 삐져나오게 */
+    border-radius: 12px;
+}
+
+/* ===== 가입 신청서 폼 ===== */
+#club_apply form {
+    max-width: 600px;
+    margin: 20px auto; /* auto로 가운데 */
+    padding: 24px;
+    background: #f7ecd9;
+    border-radius: 12px;
+}
+/* 입력칸 한 줄 (라벨 위, 입력칸 아래) */
+.form_row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+.form_row label {
+    font-weight: bold;
+}
+.form_row input,
+.form_row select,
+.form_row textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit; /* 폰트 안 달라지게 상속 */
+}
+.form_row textarea {
+    resize: vertical; /* 세로로만 늘릴 수 있게 */
+}
+/* 제출 / 초기화 버튼 */
+.form_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.form_buttons button {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form_buttons button[type="submit"] {
+    background: #c8322b;
+    color: #fff;
+}
+.form_buttons button[type="reset"] {
+    background: #ddd; /* 제출이랑 구분되게 회색 */
+}
+
+/* ===== 내비게이션 바: 호버 + 활성 링크 ===== */
+.navigation nav > a,.dropbtn{
+    padding:3px 10px;
+    border-radius:6px;
+}
+.navigation a.active:link,.navigation a.active:visited{
+    background-color:#6973df; /* 현재 메뉴 하이라이트 */
+    color:#fff;
+}
+.navigation a:hover:not(.active){
+    background-color:#e6e8fb; /* active 아닌 링크만 호버하면 배경색 바뀜 */
+}
+
+/* ===== 드롭다운 (내비게이션 안) ===== */
+.dropdown{
+    position: relative; /* 드롭다운 목록이 이 nav 기준으로 놓이게 */
+}
+.dropbtn{
+    color:#6973df;
+    font-size:17px;
+    cursor:pointer;
+}
+.dropdown:hover .dropbtn{
+    background-color:#e6e8fb;
+    color:#831ca5;
+}
+.dropdown-content{
+    display: none; /* 평소엔 안 보임 */
+    position: absolute; /* 위에서 relative 준 .dropdown 기준 */
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    border: 2px solid #6973df;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+.dropdown-content a:link,.dropdown-content a:visited{
+    display: block; /* 칸 전체가 눌리게 */
+    padding: 10px 14px;
+    text-align: left;
+    color:#6973df;
+}
+.dropdown-content a:hover{
+    background-color:#e6e8fb;
+    color:#831ca5;
+}
+.dropdown:hover .dropdown-content{
+    display: block; /* 마우스 올리면 보임 */
+}
+
+/* ===== 활동 갤러리 (float) ===== */
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both; /* float 때문에 부모 높이가 접히는 거 막으려고 */
+}
+.gallery{
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 3px solid rgb(232, 215, 141);
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+.gallery_item{
+    float: left; /* 이미지 칸 3개를 나란히 */
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.gallery_item img{
+    width: 100%;
+    height: auto;
+    border: 3px double rgb(120,120,120);
+    box-sizing: border-box;
+}
+.gallery_text{
+    clear: both; /* float 요소 아래에서 시작 (옆으로 안 감쌈) */
+    text-align: center;
+}
+
+/* ===== overflow ===== */
+.of_note{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.notice{
+    width: 350px;
+    height: 70px; /* 글이 이거보다 길어서 넘침 */
+    margin: 0 auto 20px;
+    padding: 5px 10px;
+    border: 3px solid rgb(232, 215, 141);
+    background-color: #fafafa;
+    overflow: hidden; /* 넘치는 글은 숨김 */
+}

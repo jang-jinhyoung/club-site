@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"> <!-- css 파일 연결 -->
+    <!-- 구글 폰트 불러오는 부분 (Do Hyeon = 메뉴용, Gasoek One = 제목용) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gasoek+One&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title> 
+    <link rel="icon" href="ABC_LOGO.svg"> <!-- 탭에 뜨는 아이콘, 로고 그대로 씀 -->
+</head>
+<body>
+    <!-- ===== 맨 위 헤더 ===== -->
+    <header>
+        <div class="heading">
+            <img src="ABC_LOGO.svg" alt="ABC_LOGO">
+            <h1 style="font-size: 50px;">ABC : </h1>
+            <h2>all boardgame champions</h2>
+        </div>    
+        <!-- 상단 메뉴, 누르면 아래 섹션 id로 이동함 -->
+        <div class="navigation">
+            <nav style="padding-left: 100px;"><a href="#club_info">동아리 소개</a></nav>
+            <nav><a href="#club_events">동아리 행사</a></nav>
+            <nav><a href="#club_benefit">동아리 혜택</a></nav>
+            <nav style="padding-right: 100px;"><a href="#club_rule">동아리 규칙</a></nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== 1. 동아리 소개 ===== -->
+        <h3 id="nav_sub">What The ABC Is</h3>
+        <section id="club_info">
+            <!-- 왼쪽: 문단 3개 (역사 / 목적 / 배경) -->
+            <div class="club_info_paragraph">
+                <p id="club_info_text">문단 1번 : 동아리의 역사<br>
+                    ABC는 2015년 봄, 보드게임을 좋아하는 학생 여섯 명이 강의실 한켠에 모이면서 시작되었습니다.<br>
+                    처음에는 가진 게임이 세 개뿐이라 돌아가며 하나씩 즐기는 작은 모임이었습니다.<br>
+                    입소문이 나면서 매 학기 신입 회원이 늘었고, 지금은 백여 개의 게임을 보유한 동아리로 성장했습니다.<br>
+                    해마다 교내 보드게임 체험 행사를 열며 전통을 이어 오고 있습니다.
+                </p>
+                <p id="club_info_text">문단 2번 : 동아리의 목적<br>
+                    ABC는 보드게임을 통해 학과와 학번을 넘어 자유롭게 어울리는 것을 목적으로 합니다.<br>
+                    게임 속에서 전략을 세우고 협상하며, 즐겁게 소통하는 경험을 나눕니다.<br>
+                    보드게임을 처음 접하는 사람도 부담 없이 배우고 즐길 수 있는 문화를 만들고자 합니다.<br>
+                    학업에 지친 일상 속에서 웃음과 휴식을 얻을 수 있는 공간이 되는 것이 우리의 바람입니다.
+                </p>
+                <p id="club_info_text">문단 3번 : 동아리의 배경<br>
+                    보드게임은 대화하고 마주 보며 즐기는 놀이로, 디지털 시대에 오히려 다시 주목받고 있습니다.<br>
+                    ABC는 스마트폰 화면 대신 사람의 얼굴을 마주하는 시간이 필요하다는 생각에서 출발했습니다.<br>
+                    그래서 정기 모임에서는 룰이 쉬운 게임부터 깊이 있는 전략 게임까지 다양하게 준비합니다.<br>
+                    누구나 자리에 앉는 순간 친구가 될 수 있다는 믿음이 동아리의 바탕입니다.
+                </p>
+            </div>
+
+            <!-- 오른쪽: 외부 링크 2개 (이미지 + 글자 링크 한 세트) -->
+            <article>
+                <div class="link_card">
+                    <a href="https://boardgamegeek.com/"><img src="playing_boardgame.jpg" alt="playing_boardgame"></a>
+                    <a href="https://boardgamegeek.com/" id="club_info_video">전 세계의 보드게임 소개 링크</a><br>
+                </div>    
+                <div class="link_card">
+                    <a href="https://boardgamegeek.com/"><img src="rummikub.png" alt="rummikub"></a>
+                    <a href="https://www.youtube.com/playlist?list=PLx0lLuHhYDjfYv6FA8eDqG5hWg52AOytN" id="club_info_video">보드게임 룰 설명 영상 재생목록 링크</a>
+                </div>    
+            </article>
+        </section> 
+
+        <!-- ===== 2. 동아리 행사 ===== -->
+        <h3 id="nav_sub">동아리 행사</h3>
+        <section id="club_events"> 
+            <!-- 표 왼쪽 이미지 -->
+            <img src="event1.svg" alt="event1" style="margin-right: 20px;">
+                <table id="tab"> 
+                    <!-- 표 제목줄 -->
+                    <tr style="background-color:#fafafa;">
+                        <th id="name">행사명</th>
+                        <th id="name">분류</th>
+                        <th id="name">내용</th>
+                    </tr>
+                    <!-- 행사 3개, 글자 길어서 br로 줄바꿈함 -->
+                    <tr style="margin-top:20px;">
+                        <td style="height: 100px;">신입 회원<br> 환영회</td>
+                        <td id="category">친목</td>
+                        <td>룰이 쉬운 게임으로 새 회원과<br> 기존 회원이 친해지는 학기 초 행사</td>
+                    </tr>
+                    <tr style="margin-top:20px;">
+                        <td style="height:100px;">보드게임 나눔</td>
+                        <td id="category">나눔</td>
+                        <td>동아리에서 쓰지 않는 게임을<br> 필요한 학생에게 나눠 주는 행사</td>
+                    </tr>
+                    <tr style="margin-top:20px;">
+                        <td style="padding-left: 10px;padding-right: 10px;height: 100px;">교내 보드게임<br> 무료 체험</td>
+                        <td id="category">행사</td>
+                        <td style="padding-left: 10px;padding-right: 10px;">교내 학생 누구나 무료로<br> 보드게임을 체험해 보고 동아리를 알리는 홍보 행사</td>
+                    </tr>
+                </table>
+                <!-- 표 오른쪽 이미지 -->
+                <img src="event2.svg" alt="event2" style="margin-left: 20px;"> 
+        </section>
+
+        <!-- ===== 3. 동아리 혜택 ===== -->
+        <h3 id="nav_sub">동아리 혜택</h3>  <!-- 리스트 옆에 내용 관련 이미지 2개 넣어야함-->    
+        <section id="club_benefit">
+                <div class="benefits">
+                    <!-- 혜택 6개, 앞뒤에 이모지 넣고 밑에 그림 넣음 -->
+                    <ul class="benefit_list">
+                        <li><span id="icon">&#127922;</span>원하는 게임을 동아리에서 사준다.<span id="icon">&#127922;</span><br><img src="benefit1_buy.svg" alt="benefit1_buy" style="width:160px;height:160px;"></li>
+                        <li><span id="icon">&#9823;</span>24시간 동아리 방에서 게임 가능<span id="icon">&#9823;</span><br><img src="benefit2_24h.svg" alt="benefit2_24h" style="width:160px;height:160px;"></li>
+                        <li><span id="icon">&#127881;</span>같이 할 수 있는 사람 구할 수 있다.<span id="icon">&#127881;</span><br><img src="benefit3_people.svg" alt="benefit3_people" style="width:160px;height:160px;"></li>
+                        <li><span id="icon">&#129309;</span>보드게임 카페로 단체 원정<span id="icon">&#129309;</span><br><img src="benefit4_cafe.svg" alt="benefit4_cafe" style="width:160px;height:160px;"></li> 
+                        <li><span id="icon">&#127850;</span>간식 무료 제공<span id="icon">&#127850;</span><br><img src="benefit5_snack.svg" alt="benefit5_snack" style="width:160px;height:160px;"></li>
+                        <li><span id="icon">&#127843;</span>보드게임 나눔을 받을 수 있다.<span id="icon">&#127843;</span><br><img src="event1.svg" alt="event1" style="width:160px;height:160px;"></li>
+                    </ul>    
+                </div>
+        </section>
+
+        <!-- ===== 4. 동아리 규칙 ===== -->
+         <h3 id="nav_sub">동아리 규칙</h3>
+        <section id="club_rule">
+            <div class="rule">    
+                <div class="rule_text">
+                    <!-- 규칙 제목은 h4, 설명은 p -->
+                    <h4>1.게임의 규칙을 어기지 않기&#128581;</h4>
+                    <p>같은 규칙을 지켜야 모두가 공정하게 즐길 수 있어요. 헷갈리는 규칙은 함께 룰북을 확인해요.</p>
+                    <h4>2.게임 중 싸우지 않기&#128520;</h4>
+                    <p>이기고 지는 것보다 함께 웃는 시간이 더 중요해요. 승부가 뜨거워져도 말과 행동은 부드럽게 해요.</p>
+                    <h4>3.보드게임 훔치지 않기&#128110;</h4>
+                    <p>동아리의 게임은 모두가 함께 쓰는 공용 물건이에요. 빌려 갈 때는 꼭 말하고, 쓴 뒤에는 제자리에 돌려놔요.</p>
+                </div>    
+            </div>    
+        </section>
+        
+        <!-- ===== 5. 가입 신청서 (form) ===== -->
+        <h3 id="nav_sub">가입 신청서</h3>
+        <section id="club_apply">
+        <!-- method를 post로 한 이유: get이면 개인정보가 주소창에 보임 -->
+        <form action="submit" method="post" autocomplete="on">
+
+        <!-- 이름 (text) -->
+        <div class="form_row">
+            <label for="applicant_name">이름</label>
+            <input type="text" id="applicant_name" name="name"
+                   placeholder="장진형" maxlength="20"
+                   autocomplete="name" required>
+        </div>
+
+        <!-- 이메일 (email) -->
+        <div class="form_row">
+            <label for="applicant_email">이메일</label>
+            <input type="email" id="applicant_email" name="email"
+                   placeholder="wlsgud040821@hufs.ac.kr"
+                   autocomplete="email" required>
+        </div>
+
+        <!-- 전화번호 (tel), pattern으로 형식 검사 -->
+        <div class="form_row">
+            <label for="applicant_tel">전화번호</label>
+            <input type="tel" id="applicant_tel" name="tel"
+                   placeholder="010-3115-9046"
+                   pattern="01[016789]-?[0-9]{3,4}-?[0-9]{4}"
+                   title="예: 010-3115-9046"
+                   autocomplete="tel" required>
+        </div>
+
+        <!-- 드롭다운 (select), 옵션 4개 -->
+        <div class="form_row">
+            <label for="inquiry_type">문의 종류</label>
+            <select id="inquiry_type" name="inquiry_type" required>
+                <option value="" disabled selected>선택해 주세요</option>
+                <option value="join">동아리 가입 문의</option>
+                <option value="activity">활동 · 모임 문의</option>
+                <option value="event">행사 · 나눔 문의</option>
+                <option value="etc">기타</option>
+            </select>
+        </div>
+
+        <!-- 데이터리스트: 입력하면 밑에 추천 목록 뜸 (input의 list랑 datalist의 id가 같아야 연결됨) -->
+        <div class="form_row">
+            <label for="major">전공 / 관심분야</label>
+            <input type="text" id="major" name="major" list="major_list"
+                   placeholder="입력하면 추천이 나와요" autocomplete="off">
+            <datalist id="major_list">
+                <option value="컴퓨터공학">
+                <option value="경영학">
+                <option value="영어학">
+                <option value="심리학">
+                <option value="전략 게임">
+                <option value="파티 게임">
+                <option value="협력 게임">
+            </datalist>
+        </div>
+
+        <!-- 날짜, 시간 -->
+        <div class="form_row">
+            <label for="visit_date">방문 희망 날짜</label>
+            <input type="date" id="visit_date" name="visit_date">
+        </div>
+
+        <div class="form_row">
+            <label for="visit_time">방문 희망 시간</label>
+            <input type="time" id="visit_time" name="visit_time"
+                   min="09:00" max="21:00"> <!-- 9시~21시만 선택 가능 -->
+        </div>
+
+        <!-- 하고 싶은 말 (textarea) -->
+        <div class="form_row">
+            <label for="message">하고 싶은 말</label>
+            <textarea id="message" name="message" rows="5" maxlength="500"
+                      placeholder="자기소개나 궁금한 점을 자유롭게 적어 주세요."></textarea>
+        </div>
+
+        <!-- 제출 / 초기화 버튼 -->
+        <div class="form_buttons">
+            <button type="submit">제출하기</button>
+            <button type="reset">초기화</button>
+        </div>
+    </form>
+</section>
+        <!-- ===== 6. 소개 영상 ===== -->
+        <h3 id="nav_sub">동아리 소개 영상</h3> 
+        <section id="club_video">
+        <!-- 자동재생은 muted 있어야 돼서 같이 넣음 -->
+        <video controls autoplay muted poster="poster.jpg" width="720">
+        <source src="club_intro.mp4" type="video/mp4">
+        </video>
+</section>    
+    </main>
+
+    <!-- ===== 맨 아래 푸터 ===== -->
+    <footer>
+        <div class="foot">
+            <img src="ABC_LOGO.svg" alt="ABC_LOGO" width="250vw" height="70hw">
+            <div class="foot_text">
+                <p>페이지 제작자 : 장진형
+                <!-- 푸터에도 메뉴 한 번 더 넣음 -->
+                <div id="footnav">
+                    <nav style="margin-right:20px;"><a href="#club_info">동아리 소개</a></nav>
+                    <nav style="margin-right:20px;"><a href="#club_events">동아리 행사</a></nav>
+                    <nav style="margin-right:20px;"><a href="#club_benefit">동아리 혜택</a></nav>
+                    <nav><a href="#club_rule">동아리 규칙</a></nav>
+                </div>    
+                </p>
+
+                <address>    
+                    <p>TEL. 010-3115-9046 | wlsgud040821@hufs.ac.kr</p>
+                </address>    
+                <!-- Back to top은 그냥 # 넣어서 맨 위로 올라가게 함 -->
+                <p>Copyright &copy; ABC. All Rights Reserved. <a href="#">Back to top</a></p>        
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
